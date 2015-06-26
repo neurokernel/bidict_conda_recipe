@@ -1,18 +1,19 @@
-{%set build = 0 %}
+{% set build = 0 %}
+{% set version = '0.9.0.post1' %}
 
 package:
   name: bidict
-  version: !!str 0.3.1
+  version: {{version}}
 
 about:
   home: https://github.com/jab/bidict
   license: ISC License (ISCL)
-  summary: "2-way dict with convenient slice syntax: d[65] = 'A' -> d[:'A'] == 65"
+  summary: "Efficient, Pythonic bidirectional map implementation and related functionality."
 
 source:
-  fn: bidict-0.3.1.tar.gz
-  url: https://pypi.python.org/packages/source/b/bidict/bidict-0.3.1.tar.gz
-  md5: ae55b33fc19a1e47b5f16c96ed841443
+  fn: bidict-{{version}}.tar.gz
+  url: https://pypi.python.org/packages/source/b/bidict/bidict-{{version}}.tar.gz
+  md5: 2938016e8821ef4be858cc2b9126d7d0
 
 requirements:
   build:
